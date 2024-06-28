@@ -1,17 +1,17 @@
-pkgname=dtklog-git
+pkgname=dtk6log-git
 pkgver=0.0.1
 pkgrel=1
-sourcename=dtklog
+sourcename=dtk6log
 sourcetars=("$sourcename"_"$pkgver".tar.xz)
 sourcedir="$sourcename"
-pkgdesc='DTK log modules'
+pkgdesc='DTK6 log modules'
 arch=('x86_64' 'aarch64')
-url="https://github.com/linuxdeepin/dtklog"
+url="https://github.com/linuxdeepin/dtk6log"
 license=('LGPL2.1')
-depends=('libsystemd' 'spdlog')
-makedepends=('git' 'qt5-tools' 'ninja' 'cmake')
-conflicts=('dtklog')
-provides=('dtklog')
+depends=('libsystemd' 'qt6-base' 'spdlog')
+makedepends=('git' 'ninja' 'cmake' 'pkg-config')
+conflicts=('dtk6log')
+provides=('dtk6log')
 groups=('deepin-git')
 source=("${sourcetars[@]}")
 sha512sums=('SKIP')
@@ -22,10 +22,11 @@ build() {
   cmake \
     -GNinja \
     -DCMAKE_INSTALL_LIBDIR=lib \
-    -DMKSPECS_INSTALL_DIR=lib/qt/mkspecs/modules \
+    -DMKSPECS_INSTALL_DIR=lib/qt6/mkspecs/modules \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_BUILD_TYPE=Release \
     -DBUILD_WITH_SYSTEMD=ON \
+    -DBUILD_WITH_QT6=ON \
     -DDLOG_VERSION=$version
   ninja
 }

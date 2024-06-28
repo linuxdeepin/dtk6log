@@ -1,18 +1,18 @@
-Source: dtklog
+Source: dtk6log
 Section: libdevel
 Priority: optional
 Maintainer: Deepin Packages Builder <packages@deepin.com>
-Build-Depends: debhelper-compat ( =12), pkg-config, qtbase5-dev, cmake, libsystemd-dev
+Build-Depends: debhelper-compat ( =12), pkg-config, qt6-base-dev, cmake, libsystemd-dev
 Standards-Version: 3.9.8
 
-Package: libdtklog
+Package: libdtk6log
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Multi-Arch: same
 Description: Simple, convinient and thread safe logger for Qt-based C++ apps.
  This package contains the shared libraries.
 
-Package: libdtklog-dev
+Package: libdtk6log-dev
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libdtklog( =${binary:Version})
 Description: Simple, convinient and thread safe logger for Qt-based C++ apps.
