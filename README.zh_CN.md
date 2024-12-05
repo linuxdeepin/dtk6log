@@ -1,8 +1,8 @@
 # Dtk6Log
 
-Simple, convinient and thread safe logger for Qt6-based C++ apps
+`Dtk6Log` 是基于 `Qt6` 的 `C++`` 应用的简单、便捷、线程安全日志库
 
-## Short example
+## 简单示例
 
 ```cpp
 #include <QCoreApplication>
@@ -28,12 +28,9 @@ int main(int argc, char *argv[])
 }
 ```
 
-## Adding Dtk6Log to your project
+## 项目中引入 Dtk6Log 
 
-Add this repo as a git submodule to your project. 
-
-
-Include it to your CMakeLists.txt file:
+CMakeLists.txt 文件:
 ```cmake
 find_package(Dtk6Log REQUIRED)
 ...
@@ -42,7 +39,7 @@ find_package(Dtk6Log REQUIRED)
 TARGET_LINK_LIBRARIES(${your_target} ... Dtk6::Log)
 ```
 
-Include `dloghelper.h` and one or several appenders of your choice:
+包含 `dloghelper.h` 然后根据需要的 appender 包含头文件:
 ```cpp
 #include <dloghelper.h>
 #include <ConsoleAppender.h>
