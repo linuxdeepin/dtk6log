@@ -1,5 +1,5 @@
 pkgname=dtk6log-git
-pkgver=0.0.7
+pkgver=0.0.8
 pkgrel=1
 sourcename=dtk6log
 sourcetars=("$sourcename"_"$pkgver".tar.xz)
